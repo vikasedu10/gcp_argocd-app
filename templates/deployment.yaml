@@ -26,6 +26,8 @@ spec:
                 configMapKeyRef:
                   name: {{ include "hello-world.fullname" . }}
                   key: message
+            - name: TEST_MESSAGE
+              value: Sample test value
             - name: APP_USERNAME
               valueFrom:
                 secretKeyRef:
