@@ -6,7 +6,7 @@ It is also integrated with **Argo CD** for GitOps-based continuous delivery.
 ---
 
 ## 🧱 Repository Structure
-.
+   ```.
 ├── Chart.yaml # Helm chart metadata
 ├── values.yaml # Default configuration values
 ├── templates/
@@ -16,7 +16,7 @@ It is also integrated with **Argo CD** for GitOps-based continuous delivery.
 │ ├── secret.yaml # Example Secret
 │ └── _helpers.tpl # Helm helper templates
 └── README.md # This file
-
+```
 ---
 
 ## ⚙️ Prerequisites
