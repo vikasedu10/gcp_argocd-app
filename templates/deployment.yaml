@@ -14,7 +14,7 @@ spec:
       labels:
         app: {{ include "hello-world.name" . }}
     spec:
-      replicaes: null
+      replicaes: 2
       containers:
         - name: {{ include "hello-world.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
