@@ -17,7 +17,7 @@ spec:
       replicaes: 2
       containers:
         - name: {{ include "hello-world.name" . }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}:latest"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 8080
