@@ -30,3 +30,10 @@ secret:
 ingress:
   enabled: false
 
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
+
+

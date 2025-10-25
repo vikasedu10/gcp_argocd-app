@@ -14,6 +14,15 @@ spec:
       labels:
         app: {{ include "hello-world.name" . }}
     spec:
+      minReplicas: {{ .Values.hpa.minReplicas }}
+      maxReplicas: {{ .Values.hpa.maxReplicas }}
+      metrics:
+        - type: Resource
+          resource:
+            name: cpu
+            target:
+              type: Utilization
+              averageUtilization: {{ .Values.hpa.targetCPUUtilizationPercentage }}
       containers:
         - name: {{ include "hello-world.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
