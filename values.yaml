@@ -7,7 +7,7 @@ replicaCount: 2
 image:
   repository: vikas1412/gcp_hello_world_app
   pullPolicy: Always
-  imageTag: v1.0
+  imageTag: v2.0
 
 service:
   type: LoadBalancer
